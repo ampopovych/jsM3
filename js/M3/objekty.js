@@ -51,12 +51,12 @@
 
 // Репета від 1 години починає говорити про перебирання об'єкту
 
-const feedback = {
-    good: 5,
-    neutral: 10,
-    bad: 3,
-}
-let totalFeedback = 0;
+// const feedback = {
+//     good: 5,
+//     neutral: 10,
+//     bad: 3,
+// }
+// let totalFeedback = 0;
 // Повертає масив ключив, тобто властивостей об'єкту Object.keys()
 // for (const iterator of object) {
     // const klyuchi = Object.keys(feedback);
@@ -69,12 +69,49 @@ let totalFeedback = 0;
 //
 
 // А зараз буде повернення значень Object.values()
-const znachennya = Object.values(feedback);
-console.log(znachennya);
-for (const iterator of znachennya) {
-    totalFeedback +=iterator
+// const znachennya = Object.values(feedback);
+// console.log(znachennya);
+// for (const iterator of znachennya) {
+//     totalFeedback +=iterator
+// }
+// console.log(`Всього ${totalFeedback}`)
+
+//   Деструктуризація об'єкта
+// const playlist = {
+//     name: 'Мій плейлист',
+//     rating: '',
+//     countTrack:4, 
+//     tracks: ['tr - 1', 'tr - 2', 'tr - 3', 'tr - 4'],
+// }
+// console.log(playlist);
+// const { name, rating, tracks, vlastyvist = 'nova', countTrack : numberTrack=56 } = playlist;
+
+// // console.log(tracks);
+// console.log(playlist);
+// console.log(numberTrack);
+// console.log(playlist);
+
+
+// Глибока деструктуризація
+const playlist = {
+    name: 'Мій плейлист',
+    rating: 5,
+    countTrack:4, 
+    tracks: ['tr - 1', 'tr - 2', 'tr - 3', 'tr - 4'],
+    stats: {
+        perehlyad: 25,
+        vpodobannya: 14,
+        nepodobajetsya: 9,
+    }
 }
-console.log(`Всього ${totalFeedback}`)
+
+console.log(playlist);
+const { name, rating, countTrack, tracks, stats :{ perehlyad, vpodobannya, nepodobajetsya } } = playlist;
+
+console.log(name, rating, countTrack, tracks,);
+console.log(name, rating, countTrack, tracks, perehlyad, vpodobannya, nepodobajetsya);
+console.log(name, rating, countTrack, tracks, stats, perehlyad, vpodobannya, nepodobajetsya );
+
 
 
 

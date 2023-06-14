@@ -90,16 +90,122 @@
 // // Change code below this line
 // for (key in apartment) {
 // keys.push(key);
-//   values.push(apartment[key]); 
+//   values.push(apartment[key]);
 // }
 
 
-const animal = {
-  legs: 4,
-};
-const dog = Object.create(animal);
-dog.name = "Mango";
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = "Mango";
 
-console.log(dog); // {name: 'Mango'}
-console.log(dog.name); // 'Mango'
-console.log(dog.legs); // 4
+// console.log(dog); // {name: 'Mango'}
+// console.log(dog.name); // 'Mango'
+// console.log(dog.legs); // 4
+
+
+// Задача 16
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+  
+//   const values = Object.values(salaries);
+//   for (const value of values) {
+//     totalSalary += value;
+//   }
+
+//   // Change code above this line
+//   return totalSalary;
+// }
+
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+
+
+// // Задача 17
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+  
+//   const values = Object.values(salaries);
+//   for (const value of values) {
+//     totalSalary += value;
+//   }
+
+//   // Change code above this line
+//   return totalSalary;
+// }
+
+// Задача 18
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+// for (const iterator of products) {
+//     // console.log(iterator);
+//     if (iterator.name === productName) {
+//         return console.log(iterator.price);
+//     }
+// }
+
+//     return console.log(null);
+//   // Change code above this line
+// }
+
+// getProductPrice("Radar");
+
+// Задача 19
+
+
+
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+// function getAllPropValues(propName) {
+//   let result = [];
+//   for (const product of products) {
+//     if (product[propName] === undefined) {
+//       result = [];
+//       return result;
+//     } else {
+//       result.push(product[propName]);
+//     }
+//   }
+//   return result;
+// }  
+//   console.log(getAllPropValues("price"));
+// console.log(getAllPropValues("category"));
+
+// ЗАдача 20
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function calculateTotalPrice(productName) {
+  // Change code below this line
+  let result = 0;
+  for (const product of products) {
+    console.log(product);
+    if (product.name === productName) {
+      result = product.price * product.quantity;
+    }
+  }
+
+  return result;
+  // Change code above this line
+}
+
+// console.log(calculateTotalPrice("Radar"));
+console.log(calculateTotalPrice("Scanner"));
